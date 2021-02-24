@@ -1,0 +1,27 @@
+plugins {
+    id 'java'
+}
+
+group 'ru.learnqa'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+ext{
+    restAssuredVersion = '4.3.3'
+    testNgVersion = '6.14.3'
+    jacksonVersion = '2.12.1'
+}
+
+dependencies {
+    implementation("io.rest-assured:rest-assured:$restAssuredVersion")
+    implementation("org.testng:testng:$testNgVersion")
+    implementation("com.fasterxml.jackson.core:jackson-databind:$jacksonVersion")
+    implementation 'org.testng:testng:6.14.3'
+}
+
+test{
+    useTestNG()
+}

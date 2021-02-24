@@ -1,0 +1,3 @@
+rootProject.name = 'automation_training'
+include 'api-tests'
+
