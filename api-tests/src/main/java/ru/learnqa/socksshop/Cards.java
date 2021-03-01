@@ -7,14 +7,20 @@ public class Cards{
 	@JsonProperty("expires")
 	private String expires;
 
+	@Override
+	public String toString() {
+		return "Cards{" +
+				"expires='" + expires + '\'' +
+				", longNum='" + longNum + '\'' +
+				", ccv='" + ccv + '\'' +
+				'}';
+	}
+
 	@JsonProperty("longNum")
 	private String longNum;
 
 	@JsonProperty("ccv")
 	private String ccv;
-
-	@JsonProperty("userID")
-	private String userID;
 
 	public void setExpires(String expires){
 		this.expires = expires;
@@ -40,22 +46,5 @@ public class Cards{
 		return ccv;
 	}
 
-	public void setUserID(String userID){
-		this.userID = userID;
-	}
 
-	public String getUserID(){
-		return userID;
-	}
-
-	@Override
- 	public String toString(){
-		return 
-			"Cards{" + 
-			"expires = '" + expires + '\'' + 
-			",longNum = '" + longNum + '\'' + 
-			",ccv = '" + ccv + '\'' + 
-			",userID = '" + userID + '\'' + 
-			"}";
-		}
 }
